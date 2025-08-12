@@ -51,15 +51,15 @@ export default function OnboardingPage() {
 
   if (isSuccess) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center px-4">
-        <div className="glow-card p-8 max-w-md w-full text-center">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center px-4 py-8">
+        <div className="glow-card p-6 sm:p-8 max-w-md w-full text-center">
           <div className="success-animation">
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 success-checkmark">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-2xl font-semibold text-white mb-4">Details Submitted</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Details Submitted</h2>
             <p className="text-gray-300 mb-6">Expect your contract shortly.</p>
             <button
               onClick={() => setIsSuccess(false)}
@@ -75,7 +75,7 @@ export default function OnboardingPage() {
 
   return (
     <div 
-      className="min-h-screen py-12 px-4 relative"
+      className="min-h-screen py-8 sm:py-12 px-4 relative"
       style={{
         backgroundImage: `url('https://res.cloudinary.com/dmbzcxhjn/image/upload/v1755000756/a-photograph-of-a-young-woman-lounging-o_iluGMZkITg-URraBVffTdg_Y-stmTsISd21dscsQB3LjA_1_k5fium.jpg')`,
         backgroundSize: 'cover',
@@ -90,16 +90,16 @@ export default function OnboardingPage() {
       <div className="relative z-10">
         <div className="max-w-2xl mx-auto relative">
           {/* Headline and Intro */}
-          <div className="text-center mb-2 flex items-center justify-center min-h-[100px]">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 whitespace-nowrap" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
+          <div className="text-center mb-4 sm:mb-2 flex items-center justify-center min-h-[80px] sm:min-h-[100px] px-2">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)' }}>
               Own the <span style={{ textShadow: '0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4)' }}>Sexiest</span> Business. Get <span style={{ textShadow: '0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4)' }}>Paid</span> Every Day
             </h1>
           </div>
 
           {/* Form Card */}
-          <div className="glow-card p-8 mb-12">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="glow-card p-6 sm:p-8 mb-8 sm:mb-12">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {/* First Name */}
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
@@ -175,7 +175,7 @@ export default function OnboardingPage() {
                 )}
               </div>
 
-              <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-500 ease-in-out overflow-hidden ${showAdvancedFields ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 transition-all duration-500 ease-in-out overflow-hidden ${showAdvancedFields ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
                 {/* Price */}
                 <div>
                   <label htmlFor="price" className="block text-sm font-medium text-gray-300 mb-2">
@@ -235,37 +235,37 @@ export default function OnboardingPage() {
           </div>
 
           {/* Next Steps Section */}
-          <div className="glow-card p-8">
-            <h2 className="text-2xl font-semibold text-white mb-6">What happens next</h2>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
+          <div className="glow-card p-6 sm:p-8">
+            <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6">What happens next</h2>
+            <div className="space-y-4 sm:space-y-6">
+              <div className="flex items-start space-x-3 sm:space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
                   1
                 </div>
                 <div>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                     First, we'll send a straightforward contract to your email to outline everything clearly.
                   </p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-3 sm:space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
                   2
                 </div>
                 <div>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                     Once signed, you'll receive an invoice to secure your spot.
                   </p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-3 sm:space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
                   3
                 </div>
                 <div>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                     After payment, an onboarding email arrives with a link to book your call with the team and join our dedicated communication channel—getting you set up without any guesswork.
                   </p>
                 </div>
@@ -277,7 +277,7 @@ export default function OnboardingPage() {
         {/* Toggle Button for Advanced Fields */}
         <button
           onClick={() => setShowAdvancedFields(!showAdvancedFields)}
-          className="fixed bottom-6 right-6 w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110 z-50"
+          className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110 z-50"
           title={showAdvancedFields ? "Hide advanced fields" : "Show advanced fields"}
         >
           <svg 
